@@ -12,6 +12,10 @@ class Api::PlacesController < ApplicationController
     @place.save
     render 'show.json.jb'
   end
+  def show
+    @place = Place.find(params[:id])
+    render 'show.json.jb'
+  end
   
   def update
     @place = Place.find(params[:id])
