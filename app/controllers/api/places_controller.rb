@@ -9,6 +9,7 @@ class Api::PlacesController < ApplicationController
       name: params[:name],
       address: params[:address],
     )
-    render 'index.json.jb'
+    @place.save
+    render 'show.json.jb'
   end
 end
