@@ -24,4 +24,9 @@ class Api::PlacesController < ApplicationController
     @place.save
     render 'show.json.jb'
   end
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+    render json: {message: "this place has been erased and no longer exists"}
+  end
 end

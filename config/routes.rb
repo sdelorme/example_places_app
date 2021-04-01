@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     get "/places" => "places#index"
     get "/places/:id" => "places#show"
+    delete "/places/:id" => "places#destroy"
     post "/places" => "places#create"
     patch "/places/:id" => "places#update"
   end
